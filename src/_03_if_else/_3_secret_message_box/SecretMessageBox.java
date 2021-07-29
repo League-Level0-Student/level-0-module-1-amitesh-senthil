@@ -17,16 +17,17 @@ import javax.swing.JOptionPane;
 public class SecretMessageBox {
 
 	// 0. Make a main method and put steps 1-5 inside it
-	
+	public static void main(String[] args) {
 	// 1. Set a password in a String variable
-	
+	String passcode = "1234";
 	// 2. Using a pop-up, ask the first person for a secret message and store it in a variable
-
+	String secret_message = JOptionPane.showInputDialog("what do you want the secret message to be");
 	// 3. Now use a pop-up to tell the NEXT user that they can only see the secret message 
 	//    if they can guess the passcode
-
-	// 4. If their guess matches the password, show them the secret message
-
-	// 5. If the password does not match, pop-up "INTRUDER!!"
-
-}
+	if (passcode.equals("1234")){
+		JOptionPane.showMessageDialog(null, secret_message);
+	}
+	// 3. Otherwise, tell them to sign up for classes at The League.
+	else {
+		JOptionPane.showMessageDialog(null, "Incorect");
+		
